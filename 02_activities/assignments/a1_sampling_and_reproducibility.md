@@ -10,10 +10,33 @@ Modify the number of repetitions in the simulation to 100 (from the original 100
 
 Alter the code so that it is reproducible. Describe the changes you made to the code and how they affected the reproducibility of the script file. The output does not need to match Whitby’s original blogpost/graphs, it just needs to produce the same output when run multiple times
 
-# Author: YOUR NAME
+# Author: Shaumia Ranganathan
 
 ```
 Please write your explanation here...
+Stages of sampling:
+1) Infected_indices = np.random.choice(ppl.index, size=int(len(ppl) * ATTACK_RATE), replace=False)
+  ppl.loc[infected_indices, 'infected'] = True
+This is randomly infecting a subset of people
+function used: np.random.choice
+sample size: 100
+sample frame: 800 attendees to brunch and 200 guests to weddings
+
+2) ppl.loc[ppl['infected'], 'traced'] = np.random.rand(sum(ppl['infected'])) < TRACE_SUCCESS
+Randomly decide which of the infected people get traced
+function used: np.random.rand
+sample size: 100
+sample frame: Those infected of the 800 attendees to brunch and 200 guests to weddings
+3) event_trace_counts = ppl[ppl['traced'] == True]['event'].value_counts()
+  events_traced = event_trace_counts[event_trace_counts >= SECONDARY_TRACE_THRESHOLD].index
+  ppl.loc[ppl['event'].isin(events_traced) & ppl['infected'], 'traced'] = True
+  Contact tracing based on the event attendance
+function used: value_counts
+sample size: 1000
+sample frame: 1000(wedding and brunch)
+The python script is not reproducing the same results as the post.
+After changing the simulation repetition to 100, the results are not reproducible as we did not set a seed.
+I put a seed =1 on line 20 and that makes the results reproducible.
 
 ```
 
