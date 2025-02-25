@@ -40,25 +40,30 @@ For the **Canadian General Social Survey on Giving, Volunteering, and Participat
 
 ## Part A - Survey Design: 
 
-The number of your chosen topic: `#`
+The number of your chosen topic: `1`
 
 Describe the purpose of your survey:
 ```
-write your answer here...
+write your answer here... The purpose of the survey is to better understand why lower level position employees are quitting across many of the departments and understand how to increase the employee satisfaction to ultimately lower the turnover rate.
 ```
 
 Describe your target population, sampling frame, sampling units, and observational units:
 ```
 write your answer here...
+target population: employees of lower and entry level positions
+sampling frame: HR's employee list
+sampling units: employees
+observational units: employees
 ```
+
 
 Your 5-10 question survey:
 ```
-1. write your question here...
-2. write your question here...
-3. write your question here...
-4. write your question here...
-5. write your question here...
+1. write your question here...How likely are you to recommend this company?
+2. write your question here...what is your level of satisfaction with your compensation package?
+3. write your question here...how supportive is your manager and team in helping you achieve your personal career goals?
+4. write your question here...do you feel there is room for growth within the company?
+5. write your question here...how comfortable are you to give and receive feedback from management and your team?
 6. write your question here... (optional)
 7. write your question here... (optional)
 8. write your question here... (optional)
@@ -72,6 +77,20 @@ Identify and describe survey features:
 
 ```
 write your answer here
+1. Sample type: two-stage sampling: stratified sampling and rejective sampling
+2. Sample size: 50,000
+3. Target population: 15 years and older living in the 10 provinces of Canada.
+4. Sampling frame: Telephone numbers from Census and other admin sources (both landline and cellular lines)
+5. Survey mode(s): electronic questionnaire or CATI in French/English
+6. Timeline: 2018-09-04 to 2018-12-28
+7. Response rate: 41.9%
+8. Weights: for provinces with larger population, they created 3 more strata (Quebec, Ontario and BC). They made sure that for each province, they had  a minmimum sample size that would give an acceptable sampling variability.
+9. Data processing: linking to personal tax records where respondent did not object.
+10. Cleaning, imputation, etc: The missing income information was imputed. They imputed the formal and informal volunteering variables in the master file.
+11. Sources of error: the response rate was very low so the sample data was much smaller than expected.
+12. Limitations, known biases, etc: Any household without a phone line would have been excluded.
+13. Link to documentation and any additional sources used: N/A
+
 ```
 
 ## Rubric
